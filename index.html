@@ -5,10 +5,24 @@
 		<title>Byron and Kimberley</title>
     <style>
       @font-face {
-        font-family: "Courier Prime";
-        src: local("Courier Prime"),
-             local("courier-prime"),
-             url("fonts/Courier Prime.ttf");
+        font-family: "Montserrat";
+        src: local("Montserrat"),
+             local("montserrat"),
+             url("fonts/Montserrat-Bold.ttf") format('truetype');
+      }
+      @font-face {
+        font-family: "Sanchez";
+        src: local("Sanchez"),
+             local("sanchez"),
+             url("fonts/Sanchez-Regular.ttf");
+      }
+      h1 {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-family: "Montserrat", sans-serif;
+      }
+      p {
+        font-family: "Sanchez", serif;
       }
       html {
         background-image: url(images/bg8.jpg);
@@ -19,6 +33,7 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        font-size: 90%;
       }
       .centered {
         position: fixed;
@@ -27,22 +42,98 @@
         transform: translate(-50%, -50%);
       }
       img {
-        width: 80%;
+        width: 90%;
         max-width: 756px;
         min-width: 400px;
       }
-      .html {
+      a {
+        color: inherit;
+        text-decoration-color: rgba(0,0,0,0.2)
+      }
+      .bg {
         background-color: rgba(255,255,240,0.6);
         background-blend-mode: lighten;
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        min-height: 100%;
+        min-width: 100%;
+      }
+      .col-left {
+        /* height: 100%; */
+        align-self: center;
+        width: 600px;
+        float: center;
+        text-align: center;
+      }
+      .col-right {
+        align-self: center;
+        /* height: 100%; */
+        /* width: 50%; */
+        min-width: 500px;
+        max-width: 600px;
+        text-align: center;
+        float: center;
       }
     </style>
+    <script>
+      moretext = {
+          a: "Gifts",
+          b: "Your presence on the day is very special to us so please feel no \
+              <nobr>obligation to bring a gift.</nobr>",
+
+          c: "Dress Code",
+          d: "We’d love for you to wear whatever you’re comfortable in. We expect \
+              most guests will be smart casual/informal. Please note that the wedding \
+              will be outdoors on our lawn, so appropriate \
+              footwear is recommended.",
+
+          e: "Parking",
+          f: "Our street is small, but there is plenty of street parking in the area. \
+              <nobr>We would appreciate it if you could not park in our driveway.",
+
+          g: "Back"
+      };
+      more = function(){
+          Object.keys(moretext).forEach(function(id){
+            old = document.getElementById(id).innerHTML
+            document.getElementById(id).innerHTML = moretext[id]
+            moretext[id] = old
+        })
+      }
+    </script>
   </head>
-  <body class="layer">
-      <img class="centered" src="images/inv2-final.png">
+  <body>
+    <div class="bg">
+      <div class="col-left">
+          <img src="images/inv2.png">
+      </div>
+      <div class="col-right">
+          <h1 id="a">When</h1>
+          <p id="b">
+              <a href="webcal://byronandkimberley.com/files/Byron & Kimberley's Wedding.ics">Friday 12 April 2019 </a><br/>
+              Please arrive at 2.30pm for a 3pm ceremony.
+          </p>
+
+          <h1 id="c">Where</h1>
+          <p id="d">
+              Our Home, <a href="https://www.google.com/maps/place/4+Rehfisch+Cl,+Lyneham+ACT+2602/@-35.2426625,149.1185979,17z/">4 Rehfisch Close Lyneham</a> <br/>
+              The wedding ceremony will be held in our backyard and will be followed by a casual afternoon reception with grazing table and drinks.
+          </p>
+
+          <h1 id="e">RSVP</h1>
+          <p id="f">
+              Please RSVP by 4 February 2019 to <a href="mailto:wedding@byronandkimberley.com">wedding@byronandkimberley.com</a>. <br/>
+              Let us know if you have any dietary requirements.
+          </p>
+
+          <p>
+              <a href="javascript:void()" onclick="more()" id="g"><b>More information</b></a>
+          </p>
+      </div>
+    </div>
   </body>
 </document>
