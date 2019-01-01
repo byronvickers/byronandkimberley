@@ -1,8 +1,10 @@
 <document class="html">
   <head>
     <meta charset="utf-8">
-		<meta id="meta" name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Byron and Kimberley</title>
+	<meta id="meta" name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Byron and Kimberley</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
       @font-face {
         font-family: "Montserrat";
@@ -44,7 +46,7 @@
       img {
         width: 90%;
         max-width: 756px;
-        min-width: 400px;
+        min-width: 200px;
       }
       a {
         color: inherit;
@@ -65,7 +67,7 @@
       .col-left {
         /* height: 100%; */
         align-self: center;
-        width: 600px;
+        max-width: 600px; */
         float: center;
         text-align: center;
       }
@@ -73,7 +75,7 @@
         align-self: center;
         /* height: 100%; */
         /* width: 50%; */
-        min-width: 500px;
+        min-width: 200px;
         max-width: 600px;
         text-align: center;
         float: center;
@@ -93,9 +95,9 @@
 
           e: "Parking",
           f: "Our street is small, but there is plenty of street parking in the area. \
-              <nobr>We would appreciate it if you could not park in our driveway.",
+              <br/>We would appreciate it if you could not park in our driveway.",
 
-          g: "Back"
+          g: "<b>Back</b>"
       };
       more = function(){
           Object.keys(moretext).forEach(function(id){
@@ -114,7 +116,7 @@
       <div class="col-right">
           <h1 id="a">When</h1>
           <p id="b">
-              <a href="webcal://byronandkimberley.com/files/Byron & Kimberley's Wedding.ics">Friday 12 April 2019 </a><br/>
+              <a href="/files/ByronAndKimberleyWedding.ics">Friday 12 April 2019 </a><br/>
               Please arrive at 2.30pm for a 3pm ceremony.
           </p>
 
