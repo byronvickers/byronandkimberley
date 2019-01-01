@@ -1,6 +1,6 @@
-byronvickers.github.io
+byronandkimberley.com
 ======================
 
-Personal webpage made by me.
+Website set up for our wedding.
 
-Feel free to copy and use as you will, but please attribute me as the original author.
+Hosts wedding invitation and (eventually) wedding photos or links to them.
