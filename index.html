@@ -50,7 +50,8 @@
       }
       a {
         color: inherit;
-        text-decoration-color: rgba(0,0,0,0.2)
+        text-decoration-color: rgba(0,0,0,0.2);
+        font-weight: bold;
       }
       .bg {
         background-color: rgba(255,255,240,0.6);
@@ -67,7 +68,7 @@
       .col-left {
         /* height: 100%; */
         align-self: center;
-        max-width: 600px; */
+        max-width: 500px; */
         float: center;
         text-align: center;
       }
@@ -81,32 +82,6 @@
         float: center;
       }
     </style>
-    <script>
-      moretext = {
-          a: "Gifts",
-          b: "Your presence on the day is very special to us so please feel no \
-              <nobr>obligation to bring a gift.</nobr>",
-
-          c: "Dress Code",
-          d: "We’d love for you to wear whatever you’re comfortable in. We expect \
-              most guests will be smart casual/informal. Please note that the wedding \
-              will be outdoors on our lawn, so appropriate \
-              footwear is recommended.",
-
-          e: "Parking",
-          f: "Our street is small, but there is plenty of street parking in the area. \
-              <br/>We would appreciate it if you could not park in our driveway.",
-
-          g: "<b>Back</b>"
-      };
-      more = function(){
-          Object.keys(moretext).forEach(function(id){
-            old = document.getElementById(id).innerHTML
-            document.getElementById(id).innerHTML = moretext[id]
-            moretext[id] = old
-        })
-      }
-    </script>
   </head>
   <body>
     <div class="bg">
@@ -114,26 +89,17 @@
           <img src="images/inv2.png">
       </div>
       <div class="col-right">
-          <h1 id="a">When</h1>
-          <p id="b">
-              <a href="/files/ByronAndKimberleyWedding.ics">Friday 12 April 2019 </a><br/>
-              Please arrive at 2.30pm for a 3pm ceremony.
-          </p>
+          <h1>Thank you for being a part of our wedding</h1>
 
-          <h1 id="c">Where</h1>
-          <p id="d">
-              Our Home, <a href="https://www.google.com/maps/place/4+Rehfisch+Cl,+Lyneham+ACT+2602/@-35.2426625,149.1185979,17z/">4 Rehfisch Close Lyneham</a> <br/>
-              The wedding ceremony will be held in our backyard and will be followed by a casual afternoon reception with grazing table and drinks.
-          </p>
-
-          <h1 id="e">RSVP</h1>
-          <p id="f">
-              Please RSVP by 4 February 2019 to <a href="mailto:wedding@byronandkimberley.com">wedding@byronandkimberley.com</a>. <br/>
-              Let us know if you have any dietary requirements.
-          </p>
-
+          <!-- <h1>Photos</h1> -->
           <p>
-              <a href="javascript:void()" onclick="more()" id="g"><b>More information</b></a>
+              Wedding photos taken by <a href="https://photos.google.com/share/AF1QipPfxp01fhMSjoaqI6jMnBpHAs-YOn5HPlyXiFCPaEWbVD8_oyuOTIMmFFZgYmI4Gw?key=OVZDY0pRRDlJZXRpa21DNFFIVG1ibmE3X08xSER3">Andrew McCalman and Eileen Chu.</a> <br/>
+              Wedding photos taken by <a href="https://photos.google.com/share/AF1QipN9QQjUQMHGhk66vDEq1UbS5zpwVU51BLzZXbBdo0B8wDg9SKdRifuormycFq8AuQ?key=LVM5cUF2elpmWkxzWlZSb0JIMDdmdmc4MFdjcktR">Daniel Steinberg.</a>
+          </p>
+
+          <!-- <h1>Playlist</h1> -->
+          <p>
+              <a href="https://open.spotify.com/playlist/5pDZuIvd0UC39BtcpcVNLi?si=njmG8k8QTOuYjfpxI2z8sQ">Spotify playlist from the day.</a>
           </p>
       </div>
     </div>
